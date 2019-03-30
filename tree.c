@@ -69,7 +69,7 @@ pfnote(name, ln)
 		if (!(head = np = (NODE *)malloc(sizeof(NODE))))
 			err(1, "out of space");
 	}
-	if ( Mflag || (!xflag && !strcmp(name, "main")) ) {
+	if ( !xflag && !Mflag && !strcmp(name, "main") ) {
 		if (!(fp = strrchr(curfile, '/')))
 			fp = curfile;
 		else
